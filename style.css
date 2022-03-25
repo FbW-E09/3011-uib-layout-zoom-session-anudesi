@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(70, 64, 64);
+  font-family: "Outfit", sans-serif;
+}
+.main-container {
+  height: 800px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+}
+header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+.grid-container {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 400px 400px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.grid-container img {
+  border-radius: 15px;
+  max-width: 100%;
+  height: 300px;
+}
+
+/* footer {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  margin: 0;
+  align-items: center;
+}
+footer > div {
+  display: flex;
+} */
+
+footer {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px,auto)); 
+  text-align: center;
+  background-color: black;
+  align-items: center;
+}
+
+a {
+  text-align: center;
+  color: white;
+  /* text-decoration: none; */
+}
+
+.button {
+ 
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  width: 135px;
+  height: 45px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 350px) {
+  header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: justify;
+    position: fixed;
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+  }
+  footer > div {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 200;
+    color: white;
+  }
+  footer a {
+    color: white;
+  }
+  .button {
+    width: 45px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .grid-container {
+    display: grid;
+    grid-auto-rows: repeat(9, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
